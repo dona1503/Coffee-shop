@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee House</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #6f4e37;
+        }
+        .navbar-brand, .nav-link {
+            color: white;
+        }
+        .hero {
+            background: url('coffee.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: beige;
+            text-align: center;
+        }
+        footer {
+            background-color: #6f4e37;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-coffee"></i> Coffee House</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Welcome to Coffee House</h1>
+    </header>
+    
+    <!-- About Section -->
+    <section id="about" class="container text-center my-5">
+        <h2 style="color:white; background-color:#6f4e37;">About Us</h2>
+        <p>Step into a cozy haven where the aroma of freshly brewed coffee fills the air. Whether you're craving a rich espresso, a creamy latte, or a refreshing cold brew, we serve handcrafted beverages made with love. Pair your drink with our delicious pastries and snacks for the perfect treat.
+
+            Relax, work, or catch up with friends in our warm and inviting space. Every cup tells a story—come create yours with us!
+            
+            Visit us today and sip the difference. ☕💛</p>
+    </section>
+    
+    <!-- Menu Section with Responsive Images -->
+    <section id="menu" class="container my-5">
+        <h2 class="text-center" style="background-color: #6f4e37; color:white" >Our Menu</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="expresso2.jpg" class="img-fluid rounded" alt="Coffee">
+                <p class="text-center">Espresso</p>
+            </div>
+            <div class="col-md-4">
+                <img src="latte3.jpg" class="img-fluid rounded" alt="Latte">
+                <p class="text-center">Latte</p>
+            </div>
+            <div class="col-md-4">
+                <img src="cappuchino.jpg" class="img-fluid rounded" alt="Cappuccino">
+                <p class="text-center">Cappuccino</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section with Form -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center">Contact Us</h2>
+        <form onsubmit="return validateForm()">
+            <div class="mb-3">
+                <label>Name:</label>
+                <input type="text" id="name" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Email:</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label>Message:</label>
+                <textarea id="message" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+    
+    <!-- Google Map -->
+    <div class="container my-5">
+        <h2 class="text-center">Find Us</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14734.21136991494!2d88.47613204554457!3d22.595821671599428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020b83917d8f35%3A0xf05e32ee9c4c918!2sCoffee%20House%20(Kadampukur)!5e0!3m2!1sen!2sin!4v1739564681136!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="width:1000px"></iframe>
+    </div>
+    
+    <!-- Video -->
+    <div class="container text-center my-5">
+        <h2>Watch Our Story</h2>
+        <video controls width="100%">
+            <source src="Restaurant Ad Video Template (Editable).mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Dona Dutta. All Rights Reserved.</p>
+    </footer>
+    
+    <!-- JavaScript Validation -->
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+            if (name == "" || email == "" || message == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
